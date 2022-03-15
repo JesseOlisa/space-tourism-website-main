@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./index.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <script src="./index.js" defer></script>
+  <script src="./tabs.js" defer></script>
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body class="crew">
+
+  <header class="main-header flex">
+    <div>
+      <img src="./assets/shared/logo.svg" alt="space company icon" class="space-icon">
+    </div>
+    <button class="mobile-nav-btn" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
+    <nav>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+        <li><a class="white-text uppercase ff-barlow-cond letter-spacing-2" href="./index.html"><span aria-hidden="true">00</span>Home</a></li>
+        <li><a class="white-text uppercase ff-barlow-cond letter-spacing-2" href="./destination.html"><span aria-hidden="true">01</span>Destination</a></li>
+        <li class="active"><a class="white-text uppercase ff-barlow-cond letter-spacing-2" href="./crew.html"><span aria-hidden="true">02</span>Crew</a></li>
+        <li><a class="white-text uppercase ff-barlow-cond letter-spacing-2" href="./technology.html"><span aria-hidden="true">03</span>Technology</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+
+  <main class="grid-container grid-container-crew flow">
+
+    <h1 class="numbered-title uppercase"><span aria-hidden="true">02</span> Meet your crew</h1>
+
+
+    <div class="flex dot-indicators tab-list" role="tab-list">
+      <button aria-selected="true" aria-controls="commander-btn" tabindex="-1" role="tab" data-image="commander"><span class="sr-only">The Commander</span></button>
+      <button aria-selected="false" aria-controls="specialist-btn" tabindex="-1" role="tab" data-image="specialist"><span class="sr-only">The Mission Specialist</span></button>
+      <button aria-selected="false" aria-controls="pilot-btn" tabindex="-1" role="tab" data-image="pilot"><span class="sr-only">The Pilot</span></button>
+      <button aria-selected="false" aria-controls="engineer-btn" tabindex="-1" role="tab" data-image="engineer"><span class="sr-only">The Crew Engineer</span></button>
+    </div>
+    
+    <!--THE COMMANDER-->
+    <article class="crew-content" id="commander-btn" role="tabpanel">
+
+      <header class="flow flow-space-small">
+        <h2 class="fs-600 uppercase  ff-bellefair">Commander</h2>
+        <p class="ff-bellefair fs-700 uppercase">Douglas Hurley</p>
+      </header>
+      <p>
+        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+        and former NASA astronaut. He launched into space for the third time as 
+        commander of Crew Dragon Demo-2.
+      </p>
+    </article>
+
+    <!--THE MISSION SPECIALIST-->
+
+    <article hidden class="crew-content" id="specialist-btn" role="tabpanel">
+
+      <header class="flow flow-space-small">
+        <h2 class="fs-600 uppercase  ff-bellefair">Mission Specialist</h2>
+        <p class="ff-bellefair fs-700 uppercase">Mark Shuttleworth</p>
+      </header>
+      <p>
+        Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
+        the Linux-based Ubuntu operating system. Shuttleworth became the first South 
+        African to travel to space as a space tourist.
+      </p>
+    </article>
+    <!--THE PILOT-->
+
+    <article hidden class="crew-content" id="pilot-btn" role="tabpanel">
+
+      <header class="flow flow-space-small">
+        <h2 class="fs-600 uppercase  ff-bellefair">Pilot</h2>
+        <p class="ff-bellefair fs-700 uppercase">Victor Glover</p>
+      </header>
+      <p>
+        Pilot on the first operational flight of the SpaceX Crew Dragon to the 
+        International Space Station. Glover is a commander in the U.S. Navy where 
+        he pilots an F/A-18.He was a crew member of Expedition 64, and served as a 
+        station systems flight engineer. 
+      </p>
+    </article>
+    <!--THE CREW ENGINEER-->
+
+    <article hidden class="crew-content" id="engineer-btn" role="tabpanel">
+
+      <header class="flow flow-space-small">
+        <h2 class="fs-600 uppercase  ff-bellefair">Flight Engineer</h2>
+        <p class="ff-bellefair fs-700 uppercase">Anousheh Ansari</p>
+      </header>
+      <p>
+        Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
+        Ansari was the fourth self-funded space tourist, the first self-funded woman to 
+        fly to the ISS, and the first Iranian in space. 
+      </p>
+    </article>
+
+    <picture id="commander">
+      <source srcset="assets/crew/image-douglas-hurley.png" type="png/webp">
+      <img src="./assets/crew/image-douglas-hurley.png" alt="Douglas Hurley">
+    </picture>
+    <picture hidden id="specialist">
+      <source srcset="assets/crew/image-mark-shuttleworth.png" type="png/webp">
+      <img src="./assets/crew/image-mark-shuttleworth.png" alt="Mark Shuttleworth">
+    </picture>
+    <picture hidden id="pilot">
+      <source srcset="assets/crew/image-victor-glover.png" type="png/webp">
+      <img src="./assets/crew/image-victor-glover.png" alt="Victor Glover">
+    </picture>
+    <picture hidden id="engineer">
+      <source srcset="assets/crew/image-anousheh-ansari" type="png/webp">
+      <img src="./assets/crew/image-anousheh-ansari.png" alt="Anousheh Ansari">
+    </picture>
+  </main>
+
+</body>
+</html>
